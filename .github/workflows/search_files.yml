@@ -1,4 +1,4 @@
-name: Basic Test
+name: Search Files
 
 on:
   push:
@@ -17,6 +17,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-      - name: Test the basic usage
+      - name: Search Files
         run: |
           python3 scripts/search_files.py --org $ORGANIZATION --token $TOKEN | python3 scripts/slack_webhook.py --webhook $WEBHOOK
